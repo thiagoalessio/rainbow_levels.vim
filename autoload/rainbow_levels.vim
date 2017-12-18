@@ -51,11 +51,19 @@ func! rainbow_levels#match_level(level)
 endfunc
 
 func! rainbow_levels#get_pattern(level)
-    let l:start = a:level * rainbow_levels#get_indent_size()
-    let l:end   = l:start + rainbow_levels#get_indent_size() - 1
-    return '^ \{'.l:start.','.l:end.'}\S.*$'
+    if rainbow_levels#is_indented_with_tabs()
+        return '^\t\{'.a:level.'}\S.*$'
+    else
+        let l:start = a:level * rainbow_levels#get_indent_size()
+        let l:end   = l:start + rainbow_levels#get_indent_size() - 1
+        return '^ \{'.l:start.','.l:end.'}\S.*$'
+    endif
 endfunc
 
 func! rainbow_levels#get_indent_size()
-  return (&l:shiftwidth > 0 && &l:expandtab) ? &l:shiftwidth : &l:tabstop
+    return rainbow_levels#is_indented_with_tabs() ? &l:tabstop : &l:shiftwidth
+endfunc
+
+func! rainbow_levels#is_indented_with_tabs()
+    return &l:shiftwidth <= 0 || !&l:expandtab
 endfunc
