@@ -2,6 +2,8 @@
 
 # Rainbow Levels
 
+[![Join the chat at https://gitter.im/thiagoalessio/rainbow_levels.vim](https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg)](https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 A different approach to code highlighting.
 
 [![License: MIT][license_badge]][mit_license]
