@@ -16,6 +16,24 @@ It is specially useful when dealing with deeply nested code, callback hells, etc
 
 > <https://github.com/jquery/jquery/blob/e84d3bc02eddeb0e0ca0438952ac560a794ff463/src/data/Data.js>
 
+## Usage
+
+This plugin exposes three self-explanatory commands:
+
+* `:RainbowLevelsToggle`
+* `:RainbowLevelsOn`
+* `:RainbowLevelsOff`
+
+And you can use them in a variety of ways, for example:
+
+```vim
+" Creating a mapping to turn it on and off:
+map <leader>l :RainbowLevelsToggle<cr>
+
+" Or automatically turning it on for certain file types:
+au FileType javascript,python,php,xml,yaml :RainbowLevelsOn
+```
+
 ## Where to get help
 
 Join the chat at <https://gitter.im/thiagoalessio/rainbow_levels.vim>
