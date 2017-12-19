@@ -59,8 +59,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 14,  'guifg': '#888888'}]
 ```
 
-<br/><br/><br/>
----
+<br/><br/>
 
 <img align="right" width="50%" title="Zenburn Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-zenburn.png"/>
 
@@ -78,8 +77,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 240, 'guifg': '#5b605e'}]
 ```
 
-<br/><br/><br/>
----
+<br/><br/>
 
 <img align="right" width="50%" title="Solarized Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-solarized.png"/>
 
@@ -97,8 +95,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 7, 'guifg': '#586e75'}]
 ```
 
-<br/><br/><br/>
----
+<br/><br/>
 
 <img align="right" width="50%" title="Dracula Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-dracula.png"/>
 
@@ -116,8 +113,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 231, 'guifg': '#525563'}]
 ```
 
-<br/><br/><br/>
----
+<br/><br/>
 
 <img align="right" width="50%" title="Monokai Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-monokai.png"/>
 
@@ -135,8 +131,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 0, 'guifg': '#75715e'}]
 ```
 
-<br/><br/><br/>
----
+<br/><br/>
 
 <img align="right" width="50%" title="Birds of Paradise Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-birds-of-paradise.png"/>
 
@@ -154,7 +149,7 @@ let g:rainbow_levels = [
     \{'ctermfg': 59,  'guifg': '#6b4e32'}]
 ```
 
-<br/><br/><br/>
+<br/><br/>
 
 ## Where to get help
 
