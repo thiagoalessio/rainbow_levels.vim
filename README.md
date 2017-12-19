@@ -35,13 +35,14 @@ au FileType javascript,python,php,xml,yaml :RainbowLevelsOn
 ```
 
 In addition to the commands mentioned above, it also exposes a global variable
-`g:rainbow_levels` that can be overridden to change the highlight color of each
-level.
-
-By default there are only 8 different levels, but feel free to add as many as
-you need, the plugin takes into account the amount of entries on `g:rainbow_levels`.
+`g:rainbow_levels` that can be [overridden][] to change the highlight color of
+each level.
 
 ## Themes
+
+It looks much better if the colors match the current colorscheme, so to save
+you some time, here is a list of `g:rainbow_levels` values for some popular
+colorschemes.
 
 <img align="right" width="50%" title="Jellybeans Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-jellybeans.png"/>
 
@@ -151,6 +152,94 @@ let g:rainbow_levels = [
 
 <br/><br/>
 
+## Customization
+
+It doesn't need to look like a rainbow, you can go **crazy** on how you want
+to have it colored.
+
+**Note:** The only limitation at the moment is that you can't repeat colors;
+Every entry on `g:rainbow_levels` should be unique.
+
+<img align="right" width="50%" title="Shades of Blue" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/example-shades-of-blue.png"/>
+
+### Shades of Blue
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermfg': 51, 'guifg': '#00ffff'},
+    \{'ctermfg': 45, 'guifg': '#00d7ff'},
+    \{'ctermfg': 39, 'guifg': '#00afff'},
+    \{'ctermfg': 33, 'guifg': '#0087ff'},
+    \{'ctermfg': 27, 'guifg': '#005fff'},
+    \{'ctermfg': 21, 'guifg': '#0000ff'},
+    \{'ctermfg': 20, 'guifg': '#0000d7'},
+    \{'ctermfg': 19, 'guifg': '#0000af'},
+    \{'ctermfg': 18, 'guifg': '#000087'},
+    \{'ctermfg': 17, 'guifg': '#00005f'}]
+```
+
+<br/><br/>
+
+## Want to keep syntax highlight?
+
+No problem! You can change just the background colors instead.
+
+<img align="right" width="50%" title="Shades of Gray BG" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/example-shades-of-gray-bg.png"/>
+
+### Shades of Gray (Background)
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermbg': 232, 'guibg': '#080808'},
+    \{'ctermbg': 233, 'guibg': '#121212'},
+    \{'ctermbg': 234, 'guibg': '#1c1c1c'},
+    \{'ctermbg': 235, 'guibg': '#262626'},
+    \{'ctermbg': 236, 'guibg': '#303030'},
+    \{'ctermbg': 237, 'guibg': '#3a3a3a'},
+    \{'ctermbg': 238, 'guibg': '#444444'},
+    \{'ctermbg': 239, 'guibg': '#4e4e4e'},
+    \{'ctermbg': 240, 'guibg': '#585858'}]
+```
+
+<br/><br/>
+
+<img align="right" width="50%" title="Rainbow BG" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/example-rainbow-bg.png"/>
+
+### Rainbows (Background)
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermbg': 222, 'guibg': '#ffd787'},
+    \{'ctermbg': 223, 'guibg': '#ffd7af'},
+    \{'ctermbg': 230, 'guibg': '#ffffd7'},
+    \{'ctermbg': 193, 'guibg': '#d7ffaf'},
+    \{'ctermbg': 195, 'guibg': '#d7ffff'},
+    \{'ctermbg': 189, 'guibg': '#d7d7ff'},
+    \{'ctermbg': 225, 'guibg': '#ffd7ff'},
+    \{'ctermbg': 224, 'guibg': '#ffd7d7'}]
+```
+
+<br/><br/>
+
+<img align="right" width="50%" title="Level Alert" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/example-level-alert.png"/>
+
+### Level "Alert"
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermbg': 'none', 'level': 0},
+    \{'ctermbg': 'none', 'level': 1},
+    \{'ctermbg': 'none', 'level': 2},
+    \{'ctermbg': 'none', 'level': 3},
+    \
+    \{'ctermbg': 3,   'guibg': '#ffc66d'},
+    \{'ctermbg': 9,   'guibg': '#cc7833'},
+    \{'ctermbg': 1,   'guibg': '#da4939'},
+    \{'ctermbg': 160, 'guibg': '#870000'}]
+```
+
+<br/><br/>
+
 ## Where to get help
 
 Join the chat at <https://gitter.im/thiagoalessio/rainbow_levels.vim>
@@ -169,4 +258,5 @@ rainbow_levels.vim is released under the [MIT License][].
 [Dracula]: https://draculatheme.com/
 [Monokai]: http://www.monokai.nl/
 [Birds of Paradise]: http://joebergantine.com/
+[overridden]: https://github.com/thiagoalessio/rainbow_levels.vim#customization
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
