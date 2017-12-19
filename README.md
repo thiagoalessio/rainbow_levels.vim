@@ -240,6 +240,10 @@ let g:rainbow_levels = [
 
 <br/><br/>
 
+## Special Thanks
+
+_(I'm asking permission to list their names here, come back soon ;D)_
+
 ## Where to get help
 
 Join the chat at <https://gitter.im/thiagoalessio/rainbow_levels.vim>
