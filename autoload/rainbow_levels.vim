@@ -1,4 +1,4 @@
-func! rainbow_levels#toggle()
+func! rainbow_levels#toggle() abort
     if rainbow_levels#is_on()
         call rainbow_levels#off()
     else
@@ -6,7 +6,7 @@ func! rainbow_levels#toggle()
     endif
 endfunc
 
-func! rainbow_levels#on()
+func! rainbow_levels#on() abort
     let w:rainbow_levels_match_ids = []
     call rainbow_levels#load_colors()
 
@@ -15,42 +15,42 @@ func! rainbow_levels#on()
     endfor
 endfunc
 
-func! rainbow_levels#off()
+func! rainbow_levels#off() abort
     while rainbow_levels#is_on()
         silent! call matchdelete(remove(w:rainbow_levels_match_ids, -1))
     endwhile
 endfunc
 
-func! rainbow_levels#is_on()
+func! rainbow_levels#is_on() abort
     return exists('w:rainbow_levels_match_ids')
       \ && !empty(w:rainbow_levels_match_ids)
 endfunc
 
-func! rainbow_levels#load_colors()
-    for color in g:rainbow_levels
-        exe rainbow_levels#get_highlight_command(color)
+func! rainbow_levels#load_colors() abort
+    for l:color in g:rainbow_levels
+        exe rainbow_levels#get_highlight_command(l:color)
     endfor
 endfunc
 
-func! rainbow_levels#get_highlight_command(color)
+func! rainbow_levels#get_highlight_command(color) abort
     let l:command = 'hi RainbowLevel'.index(g:rainbow_levels, a:color)
 
-    for property in ['ctermbg', 'ctermfg', 'guibg', 'guifg']
-        if has_key(a:color, property)
-          let l:command.= ' '.property.'='.a:color[property]
+    for l:property in ['ctermbg', 'ctermfg', 'guibg', 'guifg']
+        if has_key(a:color, l:property)
+          let l:command.= ' '.l:property.'='.a:color[l:property]
         endif
     endfor
 
     return l:command
 endfunc
 
-func! rainbow_levels#match_level(level)
+func! rainbow_levels#match_level(level) abort
     let l:group   = 'RainbowLevel'.a:level
     let l:pattern = rainbow_levels#get_pattern(a:level) 
     call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern))
 endfunc
 
-func! rainbow_levels#get_pattern(level)
+func! rainbow_levels#get_pattern(level) abort
     if rainbow_levels#is_indented_with_tabs()
         return '^\t\{'.a:level.'}\S.*$'
     else
@@ -60,10 +60,10 @@ func! rainbow_levels#get_pattern(level)
     endif
 endfunc
 
-func! rainbow_levels#get_indent_size()
+func! rainbow_levels#get_indent_size() abort
     return rainbow_levels#is_indented_with_tabs() ? &l:tabstop : &l:shiftwidth
 endfunc
 
-func! rainbow_levels#is_indented_with_tabs()
+func! rainbow_levels#is_indented_with_tabs() abort
     return &l:shiftwidth <= 0 || !&l:expandtab
 endfunc
