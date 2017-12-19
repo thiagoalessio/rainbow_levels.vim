@@ -117,6 +117,25 @@ let g:rainbow_levels = [
 ```
 
 <br/><br/><br/>
+---
+
+<img align="right" width="50%" title="Monokai Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-monokai.png"/>
+
+### [Monokai][]
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermfg': 2, 'guifg': '#a6e22e'},
+    \{'ctermfg': 6, 'guifg': '#66d9ef'},
+    \{'ctermfg': 4, 'guifg': '#ae81ff'},
+    \{'ctermfg': 5, 'guifg': '#f92672'},
+    \{'ctermfg': 1, 'guifg': '#fd971f'},
+    \{'ctermfg': 3, 'guifg': '#f4bf75'},
+    \{'ctermfg': 7, 'guifg': '#f8f8f2'},
+    \{'ctermfg': 0, 'guifg': '#75715e'}]
+```
+
+<br/><br/><br/>
 
 ## Where to get help
 
@@ -134,4 +153,5 @@ rainbow_levels.vim is released under the [MIT License][].
 [Zenburn]: http://kippura.org/zenburnpage/
 [Solarized]: http://ethanschoonover.com/solarized
 [Dracula]: https://draculatheme.com/
+[Monokai]: http://www.monokai.nl/
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
