@@ -136,6 +136,25 @@ let g:rainbow_levels = [
 ```
 
 <br/><br/><br/>
+---
+
+<img align="right" width="50%" title="Birds of Paradise Theme" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/theme-birds-of-paradise.png"/>
+
+### [Birds of Paradise][]
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermfg': 185, 'guifg': '#d9d762'},
+    \{'ctermfg': 109, 'guifg': '#86b4bb'},
+    \{'ctermfg': 67,  'guifg': '#6c99bb'},
+    \{'ctermfg': 98,  'guifg': '#8856d2'},
+    \{'ctermfg': 203, 'guifg': '#ef5d32'},
+    \{'ctermfg': 215, 'guifg': '#efac32'},
+    \{'ctermfg': 188, 'guifg': '#e6e1c4'},
+    \{'ctermfg': 59,  'guifg': '#6b4e32'}]
+```
+
+<br/><br/><br/>
 
 ## Where to get help
 
@@ -154,4 +173,5 @@ rainbow_levels.vim is released under the [MIT License][].
 [Solarized]: http://ethanschoonover.com/solarized
 [Dracula]: https://draculatheme.com/
 [Monokai]: http://www.monokai.nl/
+[Birds of Paradise]: http://joebergantine.com/
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
