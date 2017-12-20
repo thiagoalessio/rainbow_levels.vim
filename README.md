@@ -256,6 +256,8 @@ Join the chat at <https://gitter.im/thiagoalessio/rainbow_levels.vim>
 
 rainbow_levels.vim is released under the [MIT License][].
 
+<h2></h2><p align="center"><sub>Made with <sub><a href="#"><img src="https://thiagoalessio.ams3.digitaloceanspaces.com/heart.svg" alt="love" width="14px"/></a></sub> in Berlin</sub></p>
+
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
 [gitter]: https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [license_badge]: https://img.shields.io/badge/License-MIT-yellow.svg
