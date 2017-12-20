@@ -150,7 +150,11 @@ let g:rainbow_levels = [
     \{'ctermfg': 59,  'guifg': '#6b4e32'}]
 ```
 
-<br/><br/>
+<br/>
+
+### Check the [User-Contributed Themes][] Wiki Page for more ;D
+
+<br/>
 
 ## Customization
 
@@ -263,4 +267,5 @@ rainbow_levels.vim is released under the [MIT License][].
 [Monokai]: http://www.monokai.nl/
 [Birds of Paradise]: http://joebergantine.com/
 [overridden]: https://github.com/thiagoalessio/rainbow_levels.vim#customization
+[User-Contributed Themes]: https://github.com/thiagoalessio/rainbow_levels.vim/wiki/User-Contributed-Themes
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
