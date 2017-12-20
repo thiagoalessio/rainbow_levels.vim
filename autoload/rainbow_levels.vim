@@ -47,7 +47,7 @@ endfunc
 func! rainbow_levels#match_level(level) abort
     let l:group   = 'RainbowLevel'.a:level
     let l:pattern = rainbow_levels#get_pattern(a:level) 
-    call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern))
+    call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern, -10))
 endfunc
 
 func! rainbow_levels#get_pattern(level) abort
