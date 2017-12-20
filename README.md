@@ -152,6 +152,24 @@ let g:rainbow_levels = [
 
 <br/><br/>
 
+<img align="right" width="50%" title="Oceanic Next Theme" src=""/>
+
+### [Oceanic Next][]
+
+```vim
+let g:rainbow_levels = [
+    \{'ctermfg': 68, 'guifg': '#6699cc'},
+    \{'ctermfg': 203, 'guifg': '#ec5f67'},
+    \{'ctermfg': 221,  'guifg': '#fac863'},
+    \{'ctermfg': 114,  'guifg': '#99c794'},
+    \{'ctermfg': 176,   'guifg': '#c594c5'},
+    \{'ctermfg': 209,  'guifg': '#f99157'},
+    \{'ctermfg': 73,  'guifg': '#62b3b2'},
+    \{'ctermfg': 137,  'guifg': '#ab7967'}]
+```
+
+<br/><br/>
+
 ## Customization
 
 It doesn't need to look like a rainbow, you can go **crazy** on how you want
