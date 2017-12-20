@@ -152,7 +152,7 @@ let g:rainbow_levels = [
 
 <br/><br/>
 
-<img align="right" width="50%" title="Oceanic Next Theme" src=""/>
+<img align="right" width="50%" title="Oceanic Next Theme" src="https://raw.githubusercontent.com/shoemakerdr/rainbow_levels.vim/screenshot/screenshots/oceanic_next_theme.jpeg"/>
 
 ### [Oceanic Next][]
 
@@ -280,5 +280,6 @@ rainbow_levels.vim is released under the [MIT License][].
 [Dracula]: https://draculatheme.com/
 [Monokai]: http://www.monokai.nl/
 [Birds of Paradise]: http://joebergantine.com/
+[Oceanic Next]: https://github.com/mhartington/oceanic-next
 [overridden]: https://github.com/thiagoalessio/rainbow_levels.vim#customization
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
