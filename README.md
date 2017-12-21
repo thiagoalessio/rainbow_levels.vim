@@ -153,7 +153,7 @@ let g:rainbow_levels = [
 
 <br/>
 
-### Check the [User-Contributed Themes][] Wiki Page for more ;D
+### Check the [User-Contributed Themes][user_themes] Wiki Page for more ;D
 
 <br/>
 
@@ -247,7 +247,9 @@ let g:rainbow_levels = [
 
 ## Special Thanks
 
-_(I'm asking permission to list their names here, come back soon ;D)_
+* [Campbell Vertesi][ohthehugemanatee] and [Victor Schröder][schrodervictor] for the idea to fade the levels in shades of a single color;
+* [David De Sousa][dedsm] and [Lucas Caton][lucascaton] for the idea of highlighting only the background color, to keep syntax highlight;
+* [Derek Shoemaker][shoemakerdr] for creating the very first [User-Contributed Theme][user_themes], with a different "rainbow" order, making a beautiful contrast between levels;
 
 ## Where to get help
 
@@ -272,5 +274,10 @@ rainbow_levels.vim is released under the [MIT License][].
 [Monokai]: http://www.monokai.nl/
 [Birds of Paradise]: http://joebergantine.com/
 [overridden]: https://github.com/thiagoalessio/rainbow_levels.vim#customization
-[User-Contributed Themes]: https://github.com/thiagoalessio/rainbow_levels.vim/wiki/User-Contributed-Themes
+[user_themes]: https://github.com/thiagoalessio/rainbow_levels.vim/wiki/User-Contributed-Themes
+[ohthehugemanatee]: https://github.com/ohthehugemanatee
+[schrodervictor]: https://github.com/schrodervictor
+[dedsm]: https://github.com/dedsm
+[lucascaton]: https://www.lucascaton.com.br
+[shoemakerdr]: https://github.com/shoemakerdr
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
