@@ -250,6 +250,7 @@ let g:rainbow_levels = [
 * [Campbell Vertesi][ohthehugemanatee] and [Victor Schröder][schrodervictor] for the idea to fade the levels in shades of a single color;
 * [David De Sousa][dedsm] and [Lucas Caton][lucascaton] for the idea of highlighting only the background color, to keep syntax highlight;
 * [Derek Shoemaker][shoemakerdr] for creating the very first [User-Contributed Theme][user_themes], with a different "rainbow" order, making a beautiful contrast between levels;
+* [Ingo Karkat][inkarkat] for identifying and **fixing** several issues present on the initial implementation, refining this plugin and bringing it to the next level;
 
 ## Where to get help
 
@@ -280,4 +281,5 @@ rainbow_levels.vim is released under the [MIT License][].
 [dedsm]: https://github.com/dedsm
 [lucascaton]: https://www.lucascaton.com.br
 [shoemakerdr]: https://github.com/shoemakerdr
+[inkarkat]: https://github.com/inkarkat
 [MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
