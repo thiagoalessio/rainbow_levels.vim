@@ -163,8 +163,8 @@ let g:rainbow_levels = [
 It doesn't need to look like a rainbow, you can go **crazy** on how you want
 to have it colored.
 
-**Note:** The only limitation at the moment is that you can't repeat colors;
-Every entry on `g:rainbow_levels` should be unique.
+~~**Note:** The only limitation at the moment is that you can't repeat colors;
+Every entry on `g:rainbow_levels` should be unique.~~ (Fixed by PR #9)
 
 <img align="right" width="50%" title="Shades of Blue" src="https://thiagoalessio.ams3.digitaloceanspaces.com/rainbow_levels/example-shades-of-blue.png"/>
 
@@ -233,10 +233,10 @@ let g:rainbow_levels = [
 
 ```vim
 let g:rainbow_levels = [
-    \{'ctermbg': 'none', 'level': 0},
-    \{'ctermbg': 'none', 'level': 1},
-    \{'ctermbg': 'none', 'level': 2},
-    \{'ctermbg': 'none', 'level': 3},
+    \{'ctermbg': 'none'},
+    \{'ctermbg': 'none'},
+    \{'ctermbg': 'none'},
+    \{'ctermbg': 'none'},
     \
     \{'ctermbg': 3,   'guibg': '#ffc66d'},
     \{'ctermbg': 9,   'guibg': '#cc7833'},
