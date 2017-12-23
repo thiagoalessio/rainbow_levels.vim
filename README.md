@@ -263,7 +263,7 @@ rainbow_levels.vim is released under the [MIT License][].
 
 <h2></h2><p align="center"><sub>Made with <sub><a href="#"><img src="https://thiagoalessio.ams3.digitaloceanspaces.com/heart.svg" alt="love" width="14px"/></a></sub> in Berlin</sub></p>
 
-[version_badge]: https://img.shields.io/badge/version-0.4.0-FF00CC.svg
+[version_badge]: https://img.shields.io/badge/version-0.5.0-FF00CC.svg
 [vim_org]: http://www.vim.org/scripts/script.php?script_id=5629
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
 [gitter]: https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
