@@ -27,13 +27,16 @@ func! rainbow_levels#is_on() abort
 endfunc
 
 func! rainbow_levels#load_colors() abort
-    for l:color in g:rainbow_levels
-        exe rainbow_levels#get_highlight_command(l:color)
-    endfor
+    let l:color_index = 0
+    while l:color_index < len(g:rainbow_levels)
+        let l:color = g:rainbow_levels[l:color_index]
+        exe rainbow_levels#get_highlight_command(l:color, l:color_index)
+        let l:color_index += 1
+    endwhile
 endfunc
 
-func! rainbow_levels#get_highlight_command(color) abort
-    let l:command = 'hi RainbowLevel'.index(g:rainbow_levels, a:color)
+func! rainbow_levels#get_highlight_command(color, color_index) abort
+    let l:command = 'hi RainbowLevel'.a:color_index
 
     for l:property in ['ctermbg', 'ctermfg', 'guibg', 'guifg']
         if has_key(a:color, l:property)
@@ -46,7 +49,7 @@ endfunc
 
 func! rainbow_levels#match_level(level) abort
     let l:group   = 'RainbowLevel'.a:level
-    let l:pattern = rainbow_levels#get_pattern(a:level) 
+    let l:pattern = rainbow_levels#get_pattern(a:level)
     call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern, -10))
 endfunc
 
