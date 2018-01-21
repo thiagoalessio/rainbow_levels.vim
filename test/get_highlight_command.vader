@@ -1,0 +1,16 @@
+Execute (cterm):
+  AssertEqual 'hi RainbowLevel0 ctermfg=9', rainbow_levels#get_highlight_command({'ctermfg':9}, 0)
+  AssertEqual 'hi RainbowLevel1 ctermbg=8', rainbow_levels#get_highlight_command({'ctermbg':8}, 1)
+  AssertEqual 'hi RainbowLevel2 ctermbg=6 ctermfg=7', rainbow_levels#get_highlight_command({'ctermfg':7, 'ctermbg':6}, 2)
+
+
+Execute (gui):
+  AssertEqual 'hi RainbowLevel0 guifg=9', rainbow_levels#get_highlight_command({'guifg':9}, 0)
+  AssertEqual 'hi RainbowLevel1 guibg=8', rainbow_levels#get_highlight_command({'guibg':8}, 1)
+  AssertEqual 'hi RainbowLevel2 guibg=6 guifg=7', rainbow_levels#get_highlight_command({'guifg':7, 'guibg':6}, 2)
+
+
+Execute (cterm & gui):
+  AssertEqual 'hi RainbowLevel0 ctermfg=9 guifg=9', rainbow_levels#get_highlight_command({'ctermfg':9, 'guifg':9}, 0)
+  AssertEqual 'hi RainbowLevel1 ctermbg=8 guibg=8', rainbow_levels#get_highlight_command({'ctermbg':8, 'guibg':8}, 1)
+  AssertEqual 'hi RainbowLevel2 ctermbg=6 ctermfg=7 guibg=6 guifg=7', rainbow_levels#get_highlight_command({'ctermfg':7, 'ctermbg':6, 'guifg':7, 'guibg':6}, 2)

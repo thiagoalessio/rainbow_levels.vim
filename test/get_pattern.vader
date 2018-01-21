@@ -1,0 +1,44 @@
+Execute (no expandtab, no softtabstop):
+  set noet sts=0
+
+  AssertEqual '^\t\{0}\ *\S.*$', rainbow_levels#get_pattern(0)
+  AssertEqual '^\t\{1}\ *\S.*$', rainbow_levels#get_pattern(1)
+  AssertEqual '^\t\{2}\ *\S.*$', rainbow_levels#get_pattern(2)
+  AssertEqual '^\t\{3}\ *\S.*$', rainbow_levels#get_pattern(3)
+  AssertEqual '^\t\{4}\ *\S.*$', rainbow_levels#get_pattern(4)
+
+
+Execute (no expandtab, with softtabstop):
+  set noet sts=1
+
+  set sts=3
+  AssertEqual '^\t\{0} \{0,}\S.*$',  rainbow_levels#get_pattern(0)
+  AssertEqual '^\t\{0} \{3,}\S.*$',  rainbow_levels#get_pattern(1)
+  AssertEqual '^\t\{0} \{6,}\S.*$',  rainbow_levels#get_pattern(2)
+  AssertEqual '^\t\{0} \{9,}\S.*$',  rainbow_levels#get_pattern(3)
+  AssertEqual '^\t\{0} \{12,}\S.*$', rainbow_levels#get_pattern(4)
+
+  set sts=5
+  AssertEqual '^\t\{0} \{0,}\S.*$',  rainbow_levels#get_pattern(0)
+  AssertEqual '^\t\{0} \{5,}\S.*$',  rainbow_levels#get_pattern(1)
+  AssertEqual '^\t\{0} \{10,}\S.*$', rainbow_levels#get_pattern(2)
+  AssertEqual '^\t\{0} \{15,}\S.*$', rainbow_levels#get_pattern(3)
+  AssertEqual '^\t\{0} \{20,}\S.*$', rainbow_levels#get_pattern(4)
+
+
+Execute (with expandtab):
+  set et
+
+  set sw=2
+  AssertEqual '^ \{0,1}\S.*$', rainbow_levels#get_pattern(0)
+  AssertEqual '^ \{2,3}\S.*$', rainbow_levels#get_pattern(1)
+  AssertEqual '^ \{4,5}\S.*$', rainbow_levels#get_pattern(2)
+  AssertEqual '^ \{6,7}\S.*$', rainbow_levels#get_pattern(3)
+  AssertEqual '^ \{8,9}\S.*$', rainbow_levels#get_pattern(4)
+
+  set sw=4
+  AssertEqual '^ \{0,3}\S.*$',   rainbow_levels#get_pattern(0)
+  AssertEqual '^ \{4,7}\S.*$',   rainbow_levels#get_pattern(1)
+  AssertEqual '^ \{8,11}\S.*$',  rainbow_levels#get_pattern(2)
+  AssertEqual '^ \{12,15}\S.*$', rainbow_levels#get_pattern(3)
+  AssertEqual '^ \{16,19}\S.*$', rainbow_levels#get_pattern(4)

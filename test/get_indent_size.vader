@@ -1,0 +1,25 @@
+Execute (no expandtab, no softtabstop):
+  set noet sts=0
+  Assert rainbow_levels#is_indented_with_tabs()
+  Assert !rainbow_levels#is_indented_with_softtabstop()
+
+  set ts=111
+  AssertEqual 111, rainbow_levels#get_indent_size()
+
+
+Execute (no expandtab, with softtabstop):
+  set noet sts=1
+  Assert rainbow_levels#is_indented_with_tabs()
+  Assert rainbow_levels#is_indented_with_softtabstop()
+
+  set sts=222
+  AssertEqual 222, rainbow_levels#get_indent_size()
+
+
+Execute (with expandtab):
+  set et
+  Assert !rainbow_levels#is_indented_with_tabs()
+  Assert !rainbow_levels#is_indented_with_softtabstop()
+
+  set sw=333
+  AssertEqual 333, rainbow_levels#get_indent_size()
