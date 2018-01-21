@@ -271,7 +271,7 @@ rainbow_levels.vim is released under the [MIT License][].
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
 [gitter]: https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
 [license_badge]: https://img.shields.io/badge/License-MIT-yellow.svg
-[twitter_badge]: https://img.shields.io/twitter/url/http/shields.io.svg?style=social
+[twitter_badge]: https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter
 [tweet_intent]: https://twitter.com/intent/tweet?text=rainbow_levels.vim%3A%20A%20different%20approach%20to%20code%20highlighting.&url=https://github.com/thiagoalessio/rainbow_levels.vim&hashtags=vim
 [mit_license]: https://opensource.org/licenses/MIT
 [Jellybeans]: https://github.com/nanotech/jellybeans.vim
