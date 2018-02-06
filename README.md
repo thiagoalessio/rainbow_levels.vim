@@ -53,14 +53,14 @@ colorschemes.
 
 ```vim
 let g:rainbow_levels = [
-    \{'ctermfg': 121, 'guifg': '#65c254'},
-    \{'ctermfg': 81,  'guifg': '#8fbfdc'},
-    \{'ctermfg': 11,  'guifg': '#8197bf'},
-    \{'ctermfg': 14,  'guifg': '#c6b6ee'},
-    \{'ctermfg': 13,  'guifg': '#cf6a4c'},
-    \{'ctermfg': 121, 'guifg': '#ffb964'},
-    \{'ctermfg': 7,   'guifg': '#e8e8d3'},
-    \{'ctermfg': 14,  'guifg': '#888888'}]
+    \{'ctermfg': 107, 'guifg': '#65c254'},
+    \{'ctermfg': 110, 'guifg': '#8fbfdc'},
+    \{'ctermfg': 103, 'guifg': '#8197bf'},
+    \{'ctermfg': 183, 'guifg': '#c6b6ee'},
+    \{'ctermfg': 167, 'guifg': '#cf6a4c'},
+    \{'ctermfg': 215, 'guifg': '#ffb964'},
+    \{'ctermfg': 188, 'guifg': '#e8e8d3'},
+    \{'ctermfg': 244, 'guifg': '#888888'}]
 ```
 
 <br/><br/>
