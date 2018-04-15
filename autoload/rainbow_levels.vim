@@ -11,7 +11,7 @@ func! rainbow_levels#on() abort
 	call rainbow_levels#load_colors()
 
 	for l:level in range(0, len(g:rainbow_levels)-1)
-		call rainbow_levels#match_level(l:level)
+		call rainbow_levels#match(l:level)
 	endfor
 endfunc
 
@@ -47,7 +47,7 @@ func! rainbow_levels#get_highlight_command(color, color_index) abort
 	return l:command
 endfunc
 
-func! rainbow_levels#match_level(level) abort
+func! rainbow_levels#match(level) abort
 	let l:group   = 'RainbowLevel'.a:level
 	let l:pattern = rainbow_levels#pattern(a:level)
 	call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern, -10))
