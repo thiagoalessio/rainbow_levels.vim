@@ -6,14 +6,8 @@ func! rainbow_levels#toggle() abort
 	endif
 endfunc
 
-func! rainbow_levels#on() abort
-	let w:rainbow_levels_match_ids = []
-	let l:level = 0
-
-	while highlight_exists('RainbowLevel'.l:level)
-		call rainbow_levels#match(l:level)
-		let l:level += 1
-	endwhile
+func! rainbow_levels#is_on() abort
+	return exists('w:rainbow_levels_match_ids') && !empty(w:rainbow_levels_match_ids)
 endfunc
 
 func! rainbow_levels#off() abort
@@ -22,8 +16,14 @@ func! rainbow_levels#off() abort
 	endwhile
 endfunc
 
-func! rainbow_levels#is_on() abort
-	return exists('w:rainbow_levels_match_ids') && !empty(w:rainbow_levels_match_ids)
+func! rainbow_levels#on() abort
+	let w:rainbow_levels_match_ids = []
+	let l:level = 0
+
+	while highlight_exists('RainbowLevel'.l:level)
+		call rainbow_levels#match(l:level)
+		let l:level += 1
+	endwhile
 endfunc
 
 func! rainbow_levels#match(level) abort
@@ -48,14 +48,14 @@ func! rainbow_levels#spaces_indentation() abort
 	return &l:expandtab
 endfunc
 
-func! rainbow_levels#mixed_indentation() abort
-	return &l:softtabstop > 0 && !&l:expandtab && &l:softtabstop < &l:tabstop
-endfunc
-
 func! rainbow_levels#spaces_pattern(level) abort
 	let l:start = a:level * &l:tabstop
 	let l:end   = l:start + &l:tabstop - 1
 	return '^ \{'.l:start.','.l:end.'}\S.*$'
+endfunc
+
+func! rainbow_levels#mixed_indentation() abort
+	return &l:softtabstop > 0 && !&l:expandtab && &l:softtabstop < &l:tabstop
 endfunc
 
 func! rainbow_levels#mixed_pattern(level) abort
