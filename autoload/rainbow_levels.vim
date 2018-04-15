@@ -62,9 +62,10 @@ func! rainbow_levels#mixed_pattern(level) abort
 	let l:tabs = a:level / &l:softtabstop
 
 	if a:level % &l:softtabstop
-		let l:spaces = &l:softtabstop.','
+		let l:spaces = &l:softtabstop
 	else
-		let l:spaces = '0,'
+		let l:end    = &l:softtabstop - 1
+		let l:spaces = '0,'.l:end
 	endif
 
 	return '^\t\{'.l:tabs.'} \{'.l:spaces.'}\S.*$'

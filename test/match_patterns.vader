@@ -33,11 +33,11 @@ Execute (indented with 4 spaces):
 
 Execute (indented with mixed tabs and spaces):
   set noexpandtab tabstop=4 softtabstop=2
-  AssertEqual '^\t\{0} \{0,}\S.*$', rainbow_levels#pattern(0)
-  AssertEqual '^\t\{0} \{2,}\S.*$', rainbow_levels#pattern(1)
-  AssertEqual '^\t\{1} \{0,}\S.*$', rainbow_levels#pattern(2)
-  AssertEqual '^\t\{1} \{2,}\S.*$', rainbow_levels#pattern(3)
-  AssertEqual '^\t\{2} \{0,}\S.*$', rainbow_levels#pattern(4)
-  AssertEqual '^\t\{2} \{2,}\S.*$', rainbow_levels#pattern(5)
-  AssertEqual '^\t\{3} \{0,}\S.*$', rainbow_levels#pattern(6)
-  AssertEqual '^\t\{3} \{2,}\S.*$', rainbow_levels#pattern(7)
+  AssertEqual '^\t\{0} \{0,1}\S.*$', rainbow_levels#pattern(0)
+  AssertEqual '^\t\{0} \{2}\S.*$',   rainbow_levels#pattern(1)
+  AssertEqual '^\t\{1} \{0,1}\S.*$', rainbow_levels#pattern(2)
+  AssertEqual '^\t\{1} \{2}\S.*$',   rainbow_levels#pattern(3)
+  AssertEqual '^\t\{2} \{0,1}\S.*$', rainbow_levels#pattern(4)
+  AssertEqual '^\t\{2} \{2}\S.*$',   rainbow_levels#pattern(5)
+  AssertEqual '^\t\{3} \{0,1}\S.*$', rainbow_levels#pattern(6)
+  AssertEqual '^\t\{3} \{2}\S.*$',   rainbow_levels#pattern(7)
