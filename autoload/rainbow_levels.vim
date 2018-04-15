@@ -26,14 +26,6 @@ func! rainbow_levels#is_on() abort
 	return exists('w:rainbow_levels_match_ids') && !empty(w:rainbow_levels_match_ids)
 endfunc
 
-func! rainbow_levels#load_colors() abort
-	echo 'deprecated'
-endfunc
-
-func! rainbow_levels#get_highlight_command(color, color_index) abort
-	echo 'deprecated'
-endfunc
-
 func! rainbow_levels#match(level) abort
 	let l:group   = 'RainbowLevel'.a:level
 	let l:pattern = rainbow_levels#pattern(a:level)
@@ -50,14 +42,6 @@ func! rainbow_levels#pattern(level) abort
 	endif
 
 	return rainbow_levels#tabs_pattern(a:level)
-endfunc
-
-func! rainbow_levels#get_indent_size() abort
-	echo 'deprecated'
-endfunc
-
-func! rainbow_levels#is_indented_with_tabs() abort
-	echo 'deprecated'
 endfunc
 
 func! rainbow_levels#spaces_indentation() abort
