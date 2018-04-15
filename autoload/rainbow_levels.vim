@@ -8,11 +8,12 @@ endfunc
 
 func! rainbow_levels#on() abort
 	let w:rainbow_levels_match_ids = []
-	call rainbow_levels#load_colors()
+	let l:level = 0
 
-	for l:level in range(0, len(g:rainbow_levels)-1)
+	while highlight_exists('RainbowLevel'.l:level)
 		call rainbow_levels#match(l:level)
-	endfor
+		let l:level += 1
+	endwhile
 endfunc
 
 func! rainbow_levels#off() abort
@@ -22,29 +23,15 @@ func! rainbow_levels#off() abort
 endfunc
 
 func! rainbow_levels#is_on() abort
-	return exists('w:rainbow_levels_match_ids')
-				\ && !empty(w:rainbow_levels_match_ids)
+	return exists('w:rainbow_levels_match_ids') && !empty(w:rainbow_levels_match_ids)
 endfunc
 
 func! rainbow_levels#load_colors() abort
-	let l:color_index = 0
-	while l:color_index < len(g:rainbow_levels)
-		let l:color = g:rainbow_levels[l:color_index]
-		exe rainbow_levels#get_highlight_command(l:color, l:color_index)
-		let l:color_index += 1
-	endwhile
+	echo 'deprecated'
 endfunc
 
 func! rainbow_levels#get_highlight_command(color, color_index) abort
-	let l:command = 'hi RainbowLevel'.a:color_index
-
-	for l:property in ['ctermbg', 'ctermfg', 'guibg', 'guifg']
-		if has_key(a:color, l:property)
-			let l:command.= ' '.l:property.'='.a:color[l:property]
-		endif
-	endfor
-
-	return l:command
+	echo 'deprecated'
 endfunc
 
 func! rainbow_levels#match(level) abort
@@ -54,32 +41,51 @@ func! rainbow_levels#match(level) abort
 endfunc
 
 func! rainbow_levels#pattern(level) abort
-	if rainbow_levels#mixed_indentation()
-		let l:size = a:level * rainbow_levels#get_indent_size()
-		let l:tab_level = l:size / &l:tabstop
-		let l:space_level = l:size % &l:tabstop
-
-		return '^\t\{'.l:tab_level.'} \{'.l:space_level.',}\S.*$'
-	elseif rainbow_levels#is_indented_with_tabs()
-		return '^\t\{'.a:level.'}\ *\S.*$'
-	else
-		let l:start = a:level * rainbow_levels#get_indent_size()
-		let l:end   = l:start + rainbow_levels#get_indent_size() - 1
-		return '^ \{'.l:start.','.l:end.'}\S.*$'
+	if rainbow_levels#spaces_indentation()
+		return rainbow_levels#spaces_pattern(a:level)
 	endif
+
+	if rainbow_levels#mixed_indentation()
+		return rainbow_levels#mixed_pattern(a:level)
+	endif
+
+	return rainbow_levels#tabs_pattern(a:level)
 endfunc
 
 func! rainbow_levels#get_indent_size() abort
-	if rainbow_levels#is_indented_with_tabs()
-		return &l:softtabstop ? &l:softtabstop : &l:tabstop
-	endif
-	return &l:shiftwidth
+	echo 'deprecated'
 endfunc
 
 func! rainbow_levels#is_indented_with_tabs() abort
-	return &l:shiftwidth <= 0 || !&l:expandtab
+	echo 'deprecated'
+endfunc
+
+func! rainbow_levels#spaces_indentation() abort
+	return &l:expandtab
 endfunc
 
 func! rainbow_levels#mixed_indentation() abort
-	return &l:softtabstop > 0 && !&l:expandtab
+	return &l:softtabstop > 0 && !&l:expandtab && &l:softtabstop < &l:tabstop
+endfunc
+
+func! rainbow_levels#spaces_pattern(level) abort
+	let l:start = a:level * &l:tabstop
+	let l:end   = l:start + &l:tabstop - 1
+	return '^ \{'.l:start.','.l:end.'}\S.*$'
+endfunc
+
+func! rainbow_levels#mixed_pattern(level) abort
+	let l:tabs = a:level / &l:softtabstop
+
+	if a:level % &l:softtabstop
+		let l:spaces = &l:softtabstop.','
+	else
+		let l:spaces = '0,'
+	endif
+
+	return '^\t\{'.l:tabs.'} \{'.l:spaces.'}\S.*$'
+endfunc
+
+func! rainbow_levels#tabs_pattern(level) abort
+	return '^\t\{'.a:level.'}\ *\S.*$'
 endfunc
