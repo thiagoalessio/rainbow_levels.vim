@@ -9,6 +9,7 @@ Execute (no expandtab, no softtabstop):
 
 
 Execute (no expandtab, with softtabstop):
+  set ts=111
   set noet sts=1
 
   set sts=3
