@@ -54,7 +54,7 @@ func! rainbow_levels#match(level) abort
 endfunc
 
 func! rainbow_levels#pattern(level) abort
-	if rainbow_levels#is_indented_with_softtabstop()
+	if rainbow_levels#mixed_indentation()
 		let l:size = a:level * rainbow_levels#get_indent_size()
 		let l:tab_level = l:size / &l:tabstop
 		let l:space_level = l:size % &l:tabstop
@@ -80,6 +80,6 @@ func! rainbow_levels#is_indented_with_tabs() abort
 	return &l:shiftwidth <= 0 || !&l:expandtab
 endfunc
 
-func! rainbow_levels#is_indented_with_softtabstop() abort
+func! rainbow_levels#mixed_indentation() abort
 	return &l:softtabstop > 0 && !&l:expandtab
 endfunc
