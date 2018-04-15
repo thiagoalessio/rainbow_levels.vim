@@ -9,17 +9,6 @@ Execute (indented with tabs):
   AssertEqual '^\t\{6}\ *\S.*$', rainbow_levels#pattern(6)
   AssertEqual '^\t\{7}\ *\S.*$', rainbow_levels#pattern(7)
 
-Execute (indented with mixed tabs and spaces):
-  set noexpandtab tabstop=4 softtabstop=2
-  AssertEqual '^\t\{0} \{0,}\S.*$', rainbow_levels#pattern(0)
-  AssertEqual '^\t\{0} \{2,}\S.*$', rainbow_levels#pattern(1)
-  AssertEqual '^\t\{1} \{0,}\S.*$', rainbow_levels#pattern(2)
-  AssertEqual '^\t\{1} \{2,}\S.*$', rainbow_levels#pattern(3)
-  AssertEqual '^\t\{2} \{0,}\S.*$', rainbow_levels#pattern(4)
-  AssertEqual '^\t\{2} \{2,}\S.*$', rainbow_levels#pattern(5)
-  AssertEqual '^\t\{3} \{0,}\S.*$', rainbow_levels#pattern(6)
-  AssertEqual '^\t\{3} \{2,}\S.*$', rainbow_levels#pattern(7)
-
 Execute (indented with 2 spaces):
   set expandtab tabstop=2 sw=2
   AssertEqual '^ \{0,1}\S.*$',   rainbow_levels#pattern(0)
@@ -41,3 +30,14 @@ Execute (indented with 4 spaces):
   AssertEqual '^ \{20,23}\S.*$', rainbow_levels#pattern(5)
   AssertEqual '^ \{24,27}\S.*$', rainbow_levels#pattern(6)
   AssertEqual '^ \{28,31}\S.*$', rainbow_levels#pattern(7)
+
+Execute (indented with mixed tabs and spaces):
+  set noexpandtab tabstop=4 softtabstop=2
+  AssertEqual '^\t\{0} \{0,}\S.*$', rainbow_levels#pattern(0)
+  AssertEqual '^\t\{0} \{2,}\S.*$', rainbow_levels#pattern(1)
+  AssertEqual '^\t\{1} \{0,}\S.*$', rainbow_levels#pattern(2)
+  AssertEqual '^\t\{1} \{2,}\S.*$', rainbow_levels#pattern(3)
+  AssertEqual '^\t\{2} \{0,}\S.*$', rainbow_levels#pattern(4)
+  AssertEqual '^\t\{2} \{2,}\S.*$', rainbow_levels#pattern(5)
+  AssertEqual '^\t\{3} \{0,}\S.*$', rainbow_levels#pattern(6)
+  AssertEqual '^\t\{3} \{2,}\S.*$', rainbow_levels#pattern(7)
