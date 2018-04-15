@@ -49,11 +49,11 @@ endfunc
 
 func! rainbow_levels#match_level(level) abort
 	let l:group   = 'RainbowLevel'.a:level
-	let l:pattern = rainbow_levels#get_pattern(a:level)
+	let l:pattern = rainbow_levels#pattern(a:level)
 	call add(w:rainbow_levels_match_ids, matchadd(l:group, l:pattern, -10))
 endfunc
 
-func! rainbow_levels#get_pattern(level) abort
+func! rainbow_levels#pattern(level) abort
 	if rainbow_levels#is_indented_with_softtabstop()
 		let l:size = a:level * rainbow_levels#get_indent_size()
 		let l:tab_level = l:size / &l:tabstop
