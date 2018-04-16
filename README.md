@@ -23,9 +23,9 @@ It is specially useful when dealing with deeply nested code, callback hells, etc
 
 This plugin exposes three self-explanatory commands:
 
-* `:RainbowLevelsToggle`
 * `:RainbowLevelsOn`
 * `:RainbowLevelsOff`
+* `:RainbowLevelsToggle`
 
 And you can use them in a variety of ways, for example:
 

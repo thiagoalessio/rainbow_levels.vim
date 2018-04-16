@@ -1,6 +1,6 @@
-com! RainbowLevelsToggle call rainbow_levels#toggle()
 com! RainbowLevelsOn     call rainbow_levels#on()
 com! RainbowLevelsOff    call rainbow_levels#off()
+com! RainbowLevelsToggle call rainbow_levels#toggle()
 
 hi! link RainbowLevel0 Comment
 hi! link RainbowLevel1 Constant
