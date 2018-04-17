@@ -157,7 +157,7 @@ rainbow_levels.vim is released under the [MIT License][].
 
 [travisci_badge]: https://img.shields.io/travis/thiagoalessio/rainbow_levels.vim/master.svg?logo=travis
 [travisci]: https://travis-ci.org/thiagoalessio/rainbow_levels.vim
-[version_badge]: https://img.shields.io/badge/version-0.5.0-FF00CC.svg
+[version_badge]: https://img.shields.io/badge/version-0.6.0-FF00CC.svg
 [vim_org]: http://www.vim.org/scripts/script.php?script_id=5629
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
 [gitter]: https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
