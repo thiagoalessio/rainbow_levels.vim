@@ -7,15 +7,21 @@ jobs:
       - image: thiagoalessio/vader-vim
     steps:
       - checkout
-      - run: |
-          vim -Nu <(cat << VIMRC
-          filetype off
-          set rtp+=/vader.vim
-          set rtp+=.
-          set rtp+=after
-          filetype plugin indent on
-          VIMRC
-          ) -c 'Vader! test/*' >/dev/null
+      - run:
+          name: Running tests (with code coverage)
+          command: |
+            covimerage run vim -Nu <(cat << VIMRC
+            filetype off
+            set rtp+=/vader.vim
+            set rtp+=.
+            set rtp+=after
+            filetype plugin indent on
+            VIMRC
+            ) -c 'Vader! test/*' >/dev/null
+
+      - run:
+          name: Submiting code coverage report
+          command: covimerage xml && codecov
 
 workflows:
   version: 2

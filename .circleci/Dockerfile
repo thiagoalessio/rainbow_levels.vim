@@ -6,3 +6,4 @@ RUN apt-get -y update &&\
 	--no-install-recommends
 
 RUN git clone https://github.com/junegunn/vader.vim.git
+RUN pip install covimerage codecov
