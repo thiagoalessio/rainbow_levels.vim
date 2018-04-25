@@ -5,6 +5,7 @@
 A different approach to code highlighting.
 
 [![Circle CI][circleci_badge]][circleci]
+[![Code Coverage][codecov_badge]][codecov]
 [![Version][version_badge]][vim_org]
 [![Join the chat][gitter_badge]][gitter]
 [![License: MIT][license_badge]][mit_license]
@@ -157,6 +158,8 @@ rainbow_levels.vim is released under the [MIT License][].
 
 [circleci_badge]: https://circleci.com/gh/thiagoalessio/rainbow_levels.vim/tree/master.svg?style=shield
 [circleci]: https://circleci.com/gh/thiagoalessio/workflows/rainbow_levels.vim/tree/master
+[codecov_badge]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim/branch/master/graph/badge.svg
+[codecov]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim
 [version_badge]: https://img.shields.io/badge/version-0.6.0-FF00CC.svg
 [vim_org]: http://www.vim.org/scripts/script.php?script_id=5629
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
