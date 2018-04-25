@@ -1,7 +1,7 @@
 *rainbow_levels.txt* A different approach to code highlighting.
 
 ==============================================================================
-CONTENTS                                               *RainbowLevelsContents*
+CONTENTS                                                       *RainbowLevels*
 
 INTRODUCTION ................................ |RainbowLevelsIntroduction|
 USAGE ....................................... |RainbowLevelsUsage|
