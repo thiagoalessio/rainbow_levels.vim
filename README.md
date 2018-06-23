@@ -160,7 +160,7 @@ rainbow_levels.vim is released under the [MIT License][].
 [circleci]: https://circleci.com/gh/thiagoalessio/workflows/rainbow_levels.vim/tree/master
 [codecov_badge]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim/branch/master/graph/badge.svg
 [codecov]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim
-[version_badge]: https://img.shields.io/badge/version-0.7.0-FF00CC.svg
+[version_badge]: https://img.shields.io/badge/version-0.7.1-FF00CC.svg
 [docs_badge]: https://img.shields.io/badge/docs-%3Ah%20RainbowLevels-blue.svg
 [docs]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/doc/rainbow_levels.txt
 [vim_org]: http://www.vim.org/scripts/script.php?script_id=5629
