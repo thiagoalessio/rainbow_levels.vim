@@ -5,8 +5,7 @@ hi default link RainbowLevel3 String
 hi default link RainbowLevel4 PreProc
 hi default link RainbowLevel5 Statement
 hi default link RainbowLevel6 Identifier
-hi default link RainbowLevel7 Comment
 
-for level in range(0, 7)
-	exe 'hi! link RainbowLevel'.(level+8).' RainbowLevel'.level
+for level in range(0, 6)
+	exe 'hi! link RainbowLevel'.(level+7).' RainbowLevel'.level
 endfor
