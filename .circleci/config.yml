@@ -21,7 +21,7 @@ jobs:
 
       - run:
           name: Submiting code coverage report
-          command: covimerage xml && codecov
+          command: covimerage xml --omit */default_colors/* && codecov
 
 workflows:
   version: 2
