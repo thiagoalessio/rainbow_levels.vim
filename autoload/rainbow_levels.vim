@@ -74,3 +74,14 @@ endfunc
 func! rainbow_levels#tabs_pattern(level) abort
 	return '^\t\{'.a:level.'}\ *\S.*$'
 endfunc
+
+func! rainbow_levels#get_colors_file(dir) abort
+	let l:colors_name = get(g:, 'colors_name', 'default')
+	let l:colors_file = resolve(expand(a:dir.'/'.l:colors_name.'.vim'))
+
+	if empty(glob(l:colors_file))
+		let l:colors_file = resolve(expand(a:dir.'/default.vim'))
+	endif
+
+	return l:colors_file
+endfunc
