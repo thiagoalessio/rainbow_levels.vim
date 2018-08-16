@@ -20,7 +20,7 @@ func! rainbow_levels#on() abort
 	let w:rainbow_levels_match_ids = []
 	let l:level = 0
 
-	while highlight_exists('RainbowLevel'.l:level)
+	while hlexists('RainbowLevel'.l:level)
 		call rainbow_levels#match(l:level)
 		let l:level += 1
 	endwhile
