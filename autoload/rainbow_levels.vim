@@ -77,6 +77,7 @@ endfunc
 
 func! rainbow_levels#get_colors_file(dir) abort
 	let l:colors_name = get(g:, 'colors_name', 'default')
+	let l:colors_name = l:colors_name =~ 'base16' ? 'base16' : l:colors_name
 	let l:colors_file = resolve(expand(a:dir.'/'.l:colors_name.'.vim'))
 
 	if empty(glob(l:colors_file))
