@@ -4,6 +4,8 @@ on: [push, pull_request]
 
 jobs:
   test:
+    name: Test
+    runs-on: ubuntu-latest
     container: thiagoalessio/vader-vim
     steps:
     - name: Running tests with code coverage
