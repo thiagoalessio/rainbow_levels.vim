@@ -5,7 +5,7 @@ on: [push, pull_request]
 jobs:
   test:
     container: thiagoalessio/vader-vim
-    step:
+    steps:
     - name: Running tests with code coverage
       run: |
         covimerage run vim -Nu <(cat << VIMRC
