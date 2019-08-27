@@ -27,3 +27,5 @@ jobs:
         covimerage run vim -c 'Vader! test/*' >/dev/null
     - name: Submitting code coverage report
       run: covimerage xml --omit */default_colors/* && codecov
+      env:
+         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
