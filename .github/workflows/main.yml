@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  test:
+    container: thiagoalessio/vader-vim
+    step:
+    - name: Running tests with code coverage
+      run: |
+        covimerage run vim -Nu <(cat << VIMRC
+        filetype off
+        set rtp+=/vader.vim
+        set rtp+=.
+        set rtp+=after
+        filetype plugin indent on
+        VIMRC
+        ) -c 'Vader! test/*' >/dev/null
+    - name: Submitting code coverage report
+      run: covimerage xml --omit */default_colors/* && codecov
