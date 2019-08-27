@@ -10,13 +10,13 @@ jobs:
     steps:
     - name: Running tests with code coverage
       run: |
-        covimerage run vim -Nu <(cat << VIMRC
+        cat > ~/.vimrc <<VIMRC
         filetype off
         set rtp+=/vader.vim
         set rtp+=.
         set rtp+=after
         filetype plugin indent on
         VIMRC
-        ) -c 'Vader! test/*' >/dev/null
+        covimerage run vim -c 'Vader! test/*' >/dev/null
     - name: Submitting code coverage report
       run: covimerage xml --omit */default_colors/* && codecov
