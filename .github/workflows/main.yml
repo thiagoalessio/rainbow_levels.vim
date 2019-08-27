@@ -1,6 +1,12 @@
 name: CI
 
-on: [push, pull_request]
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
 
 jobs:
   test:
@@ -8,6 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     container: thiagoalessio/vader-vim
     steps:
+    - uses: actions/checkout@v1
     - name: Running tests with code coverage
       run: |
         cat > ~/.vimrc <<VIMRC
