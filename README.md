@@ -157,13 +157,13 @@ rainbow_levels.vim is released under the [MIT License][].
 
 <h2></h2><p align="center"><sub>Made with <sub><a href="#"><img src="https://thiagoalessio.github.io/rainbow_levels.vim/readme-images/heart.svg" alt="love" width="14px"/></a></sub> in Berlin</sub></p>
 
-[circleci_badge]: https://circleci.com/gh/thiagoalessio/rainbow_levels.vim/tree/master.svg?style=shield
-[circleci]: https://circleci.com/gh/thiagoalessio/workflows/rainbow_levels.vim/tree/master
-[codecov_badge]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim/branch/master/graph/badge.svg
+[circleci_badge]: https://circleci.com/gh/thiagoalessio/rainbow_levels.vim/tree/main.svg?style=shield
+[circleci]: https://circleci.com/gh/thiagoalessio/workflows/rainbow_levels.vim/tree/main
+[codecov_badge]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim/branch/main/graph/badge.svg
 [codecov]: https://codecov.io/gh/thiagoalessio/rainbow_levels.vim
 [version_badge]: https://img.shields.io/badge/version-0.8.0-FF00CC.svg
 [docs_badge]: https://img.shields.io/badge/docs-%3Ah%20RainbowLevels-blue.svg
-[docs]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/doc/rainbow_levels.txt
+[docs]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/main/doc/rainbow_levels.txt
 [vim_org]: http://www.vim.org/scripts/script.php?script_id=5629
 [gitter_badge]: https://badges.gitter.im/thiagoalessio/rainbow_levels.vim.svg
 [gitter]: https://gitter.im/thiagoalessio/rainbow_levels.vim?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge
@@ -178,4 +178,4 @@ rainbow_levels.vim is released under the [MIT License][].
 [lucascaton]: https://www.lucascaton.com.br
 [shoemakerdr]: https://github.com/shoemakerdr
 [inkarkat]: https://github.com/inkarkat
-[MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/master/MIT-LICENSE
+[MIT License]: https://github.com/thiagoalessio/rainbow_levels.vim/blob/main/MIT-LICENSE
