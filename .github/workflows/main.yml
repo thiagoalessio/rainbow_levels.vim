@@ -11,6 +11,7 @@ jobs:
     container: thiagoalessio/vader-vim
     steps:
     - uses: actions/checkout@v1
+
     - name: Running tests with code coverage
       run: |
         cat > ~/.vimrc <<VIMRC
@@ -21,7 +22,9 @@ jobs:
         filetype plugin indent on
         VIMRC
         covimerage run vim -c 'Vader! test/*' >/dev/null
-    - name: Submitting code coverage report
-      run: covimerage xml --omit */default_colors/* && codecov
-      env:
-         CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+    - name: Generate code coverage report
+      run: covimerage xml --omit */default_colors/*
+
+    - name: Submit code coverage report
+      run: bash <(curl -s https://codecov.io/bash)
